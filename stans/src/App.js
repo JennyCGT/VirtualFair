@@ -134,7 +134,7 @@ class App extends Component {
             <img id="postres" src="textures/logo.png" />
             {/* <img id="logosu" src="textures/suveci.png" /> */}
             {/* <img id="sky" src="textures/sky.gif" /> */}
-            <img id="sky1" src="textures/day.jpg" />
+            <img id="sky1" src="textures/sky2.jpg" />
             <img id="sky2" src="textures/sunset1.jpg" />
             <img id="road" src="textures/road.png" />
             {/* <img id="sky" src="textures/entorno3.jpg" /> */}
@@ -343,7 +343,7 @@ class App extends Component {
 
           <a-box src="#road" position="21.708 6.102 0"/>
 
-          <a-sky src={this.state.Sky} radius="80" height="2048" theta-length="90" phi-start='-180'/>
+          <a-sky src={this.state.Sky} />
 
           <a-plane
             id="street"

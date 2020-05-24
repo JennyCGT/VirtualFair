@@ -53,6 +53,9 @@ class App extends Component {
           {/* <img id="logosu" src="textures/suveci.png" /> */}
           {/* <img id="sky" src="textures/sky.gif" /> */}
           <img id="sky" src="textures/sky2.jpg" />
+          <img id="day" src="textures/day.jpg" />
+          <img id="night" src="textures/night.jpg" />
+          <img id="sunset" src="textures/sunset1.jpg" />
           <img id="road" src="textures/road.png" />
           {/* <img id="sky" src="textures/entorno3.jpg" /> */}
           <a-asset-item id="mod" src="models/stan.glb"></a-asset-item>
@@ -60,7 +63,7 @@ class App extends Component {
           <a-asset-item id="sof" src="models/sofa.glb"></a-asset-item>
           <a-asset-item id="chair" src="models/chair.glb"></a-asset-item>
           <a-asset-item id="aloe" src="models/aloe.glb"></a-asset-item>
-          <a-asset-item id="screen" src="models/pantalla.glb"></a-asset-item>
+          <a-asset-item id="screen" src="models/pantalla1.glb"></a-asset-item>
           <a-asset-item id="pino" src="models/pino.glb"></a-asset-item>
         </a-assets>
         <Entity
@@ -219,7 +222,7 @@ class App extends Component {
           rotation={{ x: 0, y: 0, z: 0 }}
         />
         <a-box src="#road" position="21.708 6.102 0"></a-box>
-        <a-sky radius="80" height="2048" src="#sky" theta-length="90" />
+        <a-sky radius="80" height="2048" src="#sunset" theta-length="90" />
         <a-plane
           id="street"
           position="-1 0.5 60.7"

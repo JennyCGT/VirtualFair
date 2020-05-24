@@ -135,7 +135,7 @@ class App extends Component {
             {/* <img id="logosu" src="textures/suveci.png" /> */}
             {/* <img id="sky" src="textures/sky.gif" /> */}
             <img id="sky1" src="textures/day.jpg" />
-            <img id="sky2" src="textures/sunset.jpg" />
+            <img id="sky2" src="textures/sunset1.jpg" />
             <img id="road" src="textures/road.png" />
             {/* <img id="sky" src="textures/entorno3.jpg" /> */}
             <a-asset-item id="mod" src="models/stan.glb"></a-asset-item>

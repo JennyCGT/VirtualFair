@@ -65,6 +65,12 @@ class App extends Component {
           <a-asset-item id="aloe" src="models/aloe.glb"></a-asset-item>
           <a-asset-item id="screen" src="models/pantalla1.glb"></a-asset-item>
           <a-asset-item id="pino" src="models/pino.glb"></a-asset-item>
+          <a-asset-item id="t_dulce" src="textos/dulce.glb"></a-asset-item>
+          <a-asset-item id="t_jrtec" src="textos/jrtec.glb"></a-asset-item>
+          <a-asset-item id="t_tech" src="textos/tech.glb"></a-asset-item>
+          <a-asset-item id="t_ques" src="textos/ques.glb"></a-asset-item>
+          <a-asset-item id="t_suveci" src="textos/suveci.glb"></a-asset-item>
+          
         </a-assets>
         <Entity
           id="sofa1"
@@ -121,20 +127,23 @@ class App extends Component {
             height="50"
             position="0 37.857 18.1}}"
           ></a-image>
+        <Entity gltf-model="#t_tech" scale="7.5 10 30" rotation ="90 180 180"
+        position="-5 194 -15" />
+
         <Entity
           geometry="primitive: plane; width: 12; height:2"
-          material="color:#027bba"
-          position={{ x: -0.355, y: 187.13, z: -13 }}
+          material="color:#0a0082"
+          position={{ x: -0.023, y: 187.13, z: -15.5 }}
           scale="6 10 0"
-        text={{
-            // font:'https://cdn.aframe.io/fonts/Aileron-Semibold.fnt',
-          //  tabSize:"2",
-            value: "TECHNOLOGY DEVELOPMENT AGENCY",
-            align: "center",
-            color: "#ffffff",
-            width: "15",
-            height: "auto",
-          }}
+        // text={{
+        //     // font:'https://cdn.aframe.io/fonts/Aileron-Semibold.fnt',
+        //   //  tabSize:"2",
+        //     value: "TECHNOLOGY DEVELOPMENT AGENCY",
+        //     align: "center",
+        //     color: "#ffffff",
+        //     width: "15",
+        //     height: "auto",
+          // }}
       ></Entity>
 
         </Entity>
@@ -151,19 +160,21 @@ class App extends Component {
             height="70"
             position="0 37.857 18.5"
           ></a-image>
+        <Entity gltf-model="#t_ques" scale="10 10 25" rotation ="90 180 180"
+        position="-28.5 183 -15" />
             <Entity
           geometry="primitive: plane; width: 12; height:2"
           material="color:#99ffcc"
-          position={{ x: -0.355, y: 187.13, z: -12 }}
+          position={{ x: -0.355, y: 187.13, z: -15.7 }}
           scale="6 10 0"
-           text={{
-            // font:'https://cdn.aframe.io/fonts/Aileron-Semibold.fnt',
-            value: "¿Quieres vender por internet?",
-            align: "center",
-            color: "#027bba",
-            width: "15",
-            height: "auto",
-          }}
+          //  text={{
+          //   // font:'https://cdn.aframe.io/fonts/Aileron-Semibold.fnt',
+          //   value: "¿Quieres vender por internet?",
+          //   align: "center",
+          //   color: "#027bba",
+          //   width: "15",
+          //   height: "auto",
+          // }}
       ></Entity>
         </Entity>
         <Entity
@@ -192,19 +203,23 @@ class App extends Component {
             height="20"
             position="23.306 191 -16"
           ></a-image> */}
+        <Entity gltf-model="#t_dulce" scale="12 10 30" rotation ="90 180 180"
+        position="-22 183 -15" />
         <Entity
           geometry="primitive: plane; width: 11; height:2"
           material="color: #fbc2c3"
           position={{ x: -0.355, y: 187.13, z: -15.6 }}
           scale="6 10 0"
-        text={{
-            value: "Endulzando paladares",
-            align: "center",
-            color: "#ff0343",
-            width: "20",
-            height: "auto",
-          }}
-      ></Entity>
+        // text={{
+        //     value: "Endulzando paladares",
+        //     align: "center",
+        //     color: "#ff0343",
+        //     width: "20",
+        //     height: "auto",
+        //   }}
+      >
+        {/* <Entity gltf-model="#t_dulce" /> */}
+      </Entity>
 
         </Entity>
         <Entity

@@ -68,10 +68,11 @@ class App extends Component {
             {/* <img id="sky" src="textures/entorno3.jpg" /> */}
             <a-asset-item id="mod" src="models/stan.glb"></a-asset-item>
             <a-asset-item id="env" src="models/Place.glb"></a-asset-item>
+            <a-asset-item id="scene" src="models/scene.glb"></a-asset-item>
             <a-asset-item id="sof" src="models/sofa.glb"></a-asset-item>
             <a-asset-item id="chair" src="models/chair.glb"></a-asset-item>
             <a-asset-item id="aloe" src="models/aloe.glb"></a-asset-item>
-            <a-asset-item id="screen" src="models/pantalla.glb"></a-asset-item>
+            <a-asset-item id="screen" src="models/pantalla1.glb"></a-asset-item>
             <a-asset-item id="pino" src="models/pino.glb"></a-asset-item>
             <video id="video2" autoPlay={true} loop={true} src="textures/Star1.mp4"/>
             <video id="video1" autoPlay={true} loop={true} src="textures/Footage.mp4"/>
@@ -85,19 +86,6 @@ class App extends Component {
             <a-asset-item id="t_suveci" src="textos/suveci.glb"></a-asset-item>
           </a-assets>
 
-          <a-entity position="25 8 -1.5" scale="5 4.5 0.1" rotation="0 270 0">
-            <a-image src="#logojr" position="0 0 0.02" scale="0.5 0.3 0.3"></a-image>
-            <a-link href="#" backgroundColor="white" borderColor="red" onClick={ () => this.jrtecpag("https://www.jrtec.io/") } scale="0.05 0.09 0.05" title="  "/>
-          </a-entity>
-
-          <a-entity position="-16.5 10.6 -11.4" scale="9 3.6 5" rotation="0 20 0">
-            <a-video src="#video1"/>
-          </a-entity>
-
-          <a-entity position="19.5 10.6 -12.4" scale="9 3.6 5" rotation="0 -20 0">
-            <a-video src="#video2"/>
-          </a-entity>
-
           <a-entity 
             raycaster="far: 22; objects: .clickable; interval: 200"
             cursor="rayOrigin: mouse"/>
@@ -106,23 +94,36 @@ class App extends Component {
 
 
           <a-gltf-model
+            id='Sofa'
             src="#sof"
             scale="7 7 7"
-            position="-22.5 0 14.621"
+            position="-33 0 14.621"
             rotation="0 90 0"/>
 
           <a-gltf-model
+            id="scree"
             src="#screen"
             scale="0.01 0.007 0.01"
-            position="20 0 -14"
-            rotation="0 -110 0"/>
+            position="14.5 0 -51"
+            rotation="0 -110 0">
+          <a-entity position="187 1518 11." scale="900 500 100" rotation="0 90 0">
+            <a-video src="#video2"/>
+          </a-entity>
+
+            </a-gltf-model>
 
           <a-gltf-model
             id="scree1"
             src="#screen"
             scale="0.01 0.007 0.01"
-            position="-17 0 -13"
-            rotation="0 -70 0"/>
+            position="-30 0 -13"
+            rotation="0 -70 0">
+          <a-entity position="187 1518 11." scale="900 500 100" rotation="0 90 0">
+            <a-video src="#video1"/>
+          </a-entity>
+
+
+            </a-gltf-model>
 
           <a-gltf-model
             id="tree"
@@ -148,7 +149,7 @@ class App extends Component {
             id="stan1"
             src="#mod"
             scale="0.2 0.07 0.1"
-            position="22.095 0 -3"
+            position="28 0 -3"
             rotation="0 -90 0">
             
             <a-image
@@ -174,13 +175,19 @@ class App extends Component {
               material="color:#0a0082"
               position={{ x: -0.023, y: 187.13, z: -15.5 }}
               scale="6 10 0"/>
+
+            <a-entity position="7 111 -30" scale="30 50 50" rotation="0 0 -2">
+            <a-image src="#logojr" position="0 0 0.02" scale="0.5 0.3 0.3"></a-image>
+            <a-link href="#" backgroundColor="white" borderColor="red" onClick={ () => this.jrtecpag("https://www.jrtec.io/") } scale="0.05 0.09 0.05" title="  "/>
+          </a-entity>
+ 
           </a-gltf-model>
 
           <a-gltf-model
             id="stan2"
             src="#mod"
             scale="0.2 0.07 0.1"
-            position="-20.621 0 -3"
+            position="-32 0 -3"
             rotation="0 90 0">
 
             <a-image
@@ -206,15 +213,15 @@ class App extends Component {
             id="stan3"
             src="#mod"
             scale="0.2 0.07 0.1"
-            position="13 0 -17.51"
-            rotation="0 0 0"/>
+            position="28 0 -52.7"
+            rotation="0 -35 0"/>
 
           <a-gltf-model
             id="stan4"
             src="#mod"
             scale="0.2 0.07 0.1"
-            position="-10 0 -17.51"
-            rotation="0 0 0">
+            position="-17 0 -50.5"
+            rotation="0 35 0">
 
             <a-image
               src="#postres"
@@ -245,19 +252,27 @@ class App extends Component {
             id="stan5"
             src="#mod"
             scale="0.2 0.07 0.1"
-            position="22.095 0 13"
+            position="28 0 13"
             rotation="0 -90 0"/>
           
           <a-gltf-model
             id="env"
             src="#env"
-            scale="0.1 0.05 0.05"
-            position="4.455 0 -22.804"
+            scale="0.18 0.07 0.1"
+            position="4.455 0 -73"
             rotation="0 0 0"/>
 
-          <a-box src="#road" position="21.708 6.102 0"/>
+          <a-gltf-model
+            id="scene"
+            src="#scene"
+            scale="0.15 0.15 0.15"
+            position="-38 0 -12"
+            rotation="-90 0 0"/>
 
-          <a-sky src={this.state.Sky} radius="80" height="2048" theta-length="90" phi-start='-180' />
+          <a-box src="#road" position="25.708 6.102 0"/>
+
+          <a-sky src={this.state.Sky} radius="120" height="2048" theta-length="90" phi-start='-180' 
+          position="0 0 -28"/>
 
           <a-plane
             id="street"
@@ -269,20 +284,20 @@ class App extends Component {
             src="#road"/>
             {/*  material="envMap: #road; roughness: 0" */}
 
-          <a-sphere position="-19.744 7 -5" radius="1.25" color="#EF2D5E" />
+          <a-sphere position="-30.744 7 -5" radius="1.25" color="#EF2D5E" />
 
           <a-cylinder
-            position="21.386 6.476 -3"
+            position="25 6.476 -3"
             radius="0.5"
             height="1.5"
             color="#FFC65D"/>
 
-          <a-plane
+          {/* <a-plane
             // position="0 0 -4"
             rotation="-90 0 0"
             width="60"
             height="60"
-            src="#ground"/>
+            src="#ground"/> */}
 
           <a-entity id="light" light="type: ambient; color: #BBB"/>
 
@@ -307,7 +322,7 @@ class App extends Component {
             rotation={{ x: 0, y: rotate, z: 0 }}/>}
             {/* rotation={{ x: 0, y: 0, z: 0 }}*/}
 
-          <a-camera wasd-controls="acceleration:400" position="0 8 22"/>
+          <a-camera wasd-controls="acceleration:400" position="-5 8 30"/>
         
         </a-scene>
 

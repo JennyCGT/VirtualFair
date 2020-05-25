@@ -85,24 +85,44 @@ class App extends Component {
             <a-asset-item id="t_suveci" src="textos/suveci.glb"></a-asset-item>
           </a-assets>
 
-          <a-entity position="25 8 -1.5" scale="5 4.5 0.1" rotation="0 270 0">
-            <a-image src="#logojr" position="0 0 0.02" scale="0.5 0.3 0.3"></a-image>
-            <a-link href="#" backgroundColor="white" borderColor="red" onClick={ () => this.jrtecpag("https://www.jrtec.io/") } scale="0.05 0.09 0.05" title="  "/>
-          </a-entity>
+          <a-entity 
+            position="25 8 -1.5" 
+            scale="5 4.5 0.1" 
+            rotation="0 270 0">
 
-          <a-entity position="-16.5 10.6 -11.4" scale="9 3.6 5" rotation="0 20 0">
-            <a-video src="#video1"/>
-          </a-entity>
+            <a-image 
+              src="#logojr" 
+              position="0 0 0.02" 
+              scale="0.5 0.3 0.3"/>
 
-          <a-entity position="19.5 10.6 -12.4" scale="9 3.6 5" rotation="0 -20 0">
-            <a-video src="#video2"/>
+            <a-link 
+              href="#" 
+              backgroundColor="white" 
+              borderColor="red" 
+              onClick={ () => this.jrtecpag("https://www.jrtec.io/") } 
+              scale="0.05 0.09 0.05" 
+              title="  "/>
           </a-entity>
 
           <a-entity 
-            raycaster="far: 22; objects: .clickable; interval: 200"
-            cursor="rayOrigin: mouse"/>
+            position="-16.5 10.6 -11.4" 
+            scale="9 3.6 5" 
+            rotation="0 20 0">
+            <a-video src="#video1"/>
+          </a-entity>
 
-          <a-sound id="sound1" src="textures/Mall.ogg" autoplay="true" loop="true" ></a-sound>
+          <a-entity 
+            position="19.5 10.6 -12.4" 
+            scale="9 3.6 5" 
+            rotation="0 -20 0">
+            <a-video src="#video2"/>
+          </a-entity>
+
+          <a-sound 
+            id="sound1" 
+            src="textures/Mall.ogg" 
+            autoplay="true" 
+            loop="true"/>
 
 
           <a-gltf-model

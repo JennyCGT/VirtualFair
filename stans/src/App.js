@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   componentWillUnmount() {
@@ -73,7 +73,7 @@ class App extends Component {
             <a-asset-item id="aloe" src="models/aloe.glb"></a-asset-item>
             <a-asset-item id="screen" src="models/pantalla.glb"></a-asset-item>
             <a-asset-item id="pino" src="models/pino.glb"></a-asset-item>
-            <video id="video2" autoPlay={true} loop={true} src="textures/Star.mp4"/>
+            <video id="video2" autoPlay={true} loop={true} src="textures/Star1.mp4"/>
             <video id="video1" autoPlay={true} loop={true} src="textures/Footage.mp4"/>
             <img id="Pause" src="textures/play-button.png"/>
             <img id="Play" src="textures/pause.png"/>

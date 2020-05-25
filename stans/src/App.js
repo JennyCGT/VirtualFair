@@ -9,8 +9,6 @@ class App extends Component {
     super(props);
     this.state = {
       Sky: "#sky1",
-      Video1Mode: "#Pause",
-      Video2Mode: "#Pause",
       SoundMode: "Play",
     };
   }
@@ -18,52 +16,6 @@ class App extends Component {
   jrtecpag = (data) => {
     window.open(data);
     console.log('ok3')
-  }
-
-  modeplay = (video) => {
-    if (video === "#video1"){
-      if (this.state.Video1Mode==="#Play"){
-        console.log('ok1')
-        setTimeout(() => this.modepa("#video1"), 250);
-      }else{
-        console.log('ok2')
-        setTimeout(() => this.modepl("#video1"), 250);
-      }
-    }else{
-      if (this.state.Video2Mode==="#Play"){
-        console.log('ok1')
-        setTimeout(() => this.modepa("#video2"), 250);
-      }else{
-        console.log('ok2')
-        setTimeout(() => this.modepl("#video2"), 250);
-      }
-    }
-  }
-
-  modepl = (vid) => {
-    const video1El = document.querySelector(vid);
-    const sound1El = document.querySelector('#sound1');
-    sound1El.components.sound.pauseSound();
-    video1El.play();
-    if (vid === "#video1"){
-      this.setState({Video1Mode: "#Play"})
-    }else{
-      this.setState({Video2Mode: "#Play"})
-    }
-  }
-
-  modepa = (vid) => {
-    const video1El = document.querySelector(vid);
-    const sound1El = document.querySelector('#sound1');
-    video1El.pause();
-    if (this.state.SoundMode==="Play"){
-      sound1El.components.sound.playSound();
-    }
-    if (vid === "#video1"){
-      this.setState({Video1Mode: "#Pause"})
-    }else{
-      this.setState({Video2Mode: "#Pause"})
-    }  
   }
 
   stop =() => {
@@ -86,35 +38,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const video1El = document.querySelector('#video1');
-    video1El.addEventListener('ended', () => {
-      const entity = document.querySelector('#sound1');
-      if (this.state.SoundMode==="Play"){
-        entity.components.sound.playSound();
-      }else{
-        entity.components.sound.stopSound();
-      }
-      
-      this.setState({Video1Mode: "#Pause"})
-    });
-
-    const video2El = document.querySelector('#video2');
-    video2El.addEventListener('ended', () => {
-      const entity = document.querySelector('#sound1');
-      if (this.state.SoundMode==="Play"){
-        entity.components.sound.playSound();
-      }else{
-        entity.components.sound.stopSound();
-      }
-      
-      this.setState({Video2Mode: "#Pause"})
-    });
-
-
+    
   }
 
   componentWillUnmount() {
-    
+
   }
 
   render() {
@@ -145,8 +73,8 @@ class App extends Component {
             <a-asset-item id="aloe" src="models/aloe.glb"></a-asset-item>
             <a-asset-item id="screen" src="models/pantalla.glb"></a-asset-item>
             <a-asset-item id="pino" src="models/pino.glb"></a-asset-item>
-            <video id="video1" src="textures/mountains.mp4"/>
-            <video id="video2" src="textures/Footage.mp4"/>
+            <video id="video2" autoPlay={true} loop={true} src="textures/Star.mp4"/>
+            <video id="video1" autoPlay={true} loop={true} src="textures/Footage.mp4"/>
             <img id="Pause" src="textures/play-button.png"/>
             <img id="Play" src="textures/pause.png"/>
             <img id="usuario1" src="textures/Usuario1.jpg" />
@@ -157,30 +85,16 @@ class App extends Component {
             <a-asset-item id="t_suveci" src="textos/suveci.glb"></a-asset-item>
           </a-assets>
 
-          <a-entity position="25 8 -1.5" scale="6 6 6" rotation="0 270 0">
+          <a-entity position="25 8 -1.5" scale="5 4.5 0.1" rotation="0 270 0">
             <a-image src="#logojr" position="0 0 0.02" scale="0.5 0.3 0.3"></a-image>
             <a-link href="#" backgroundColor="white" borderColor="red" onClick={ () => this.jrtecpag("https://www.jrtec.io/") } scale="0.05 0.09 0.05" title="  "/>
           </a-entity>
 
           <a-entity position="-16.5 10.6 -11.4" scale="9 3.6 5" rotation="0 20 0">
-            <a-image 
-            src= {this.state.Video1Mode} 
-            class="clickable" 
-            position="-0.4 -0.4 0.005" 
-            scale="0.15 0.15 0.15" 
-            onClick={ () => this.modeplay("#video1") }/>
-
             <a-video src="#video1"/>
           </a-entity>
 
           <a-entity position="19.5 10.6 -12.4" scale="9 3.6 5" rotation="0 -20 0">
-            <a-image 
-            src= {this.state.Video2Mode} 
-            class="clickable" 
-            position="-0.4 -0.4 0.005" 
-            scale="0.15 0.15 0.15" 
-            onClick={ () => this.modeplay("#video2") }/>
-
             <a-video src="#video2"/>
           </a-entity>
 

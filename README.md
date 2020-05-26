@@ -16,7 +16,16 @@ This virtual fair version is a base for a project of advertising fair. The mocku
 The design of this virtual environment was designed in React.js with the framework Aframe. 
 
 ## Test
+<p align="center">
+<img src="images/feria1.JPG" class="img-responsive" height="200"> 
+<img src="images/feria2.JPG" class="img-responsive" height="200"> 
+<img src="images/feria3.JPG" class="img-responsive" height="200"> 
+<img src="images/feria4.JPG" class="img-responsive" height="200"> 
+
+</p>
+<p align="center">
 <img src="/images/Mi video2.gif" alt="Test">
+</p>
 
 ## Contributors
 

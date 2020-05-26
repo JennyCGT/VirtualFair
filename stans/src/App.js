@@ -52,7 +52,6 @@ class App extends Component {
           vr-mode-ui="enabled: false" 
           raycaster="far: 22; objects: [link], .clickable; interval: 500"
           cursor="rayOrigin: mouse">
-
           <a-assets>
             <img id="ground" src="textures/brick.jpg" />
             <img id="logojr" src="textures/jrtec.png" />
@@ -91,6 +90,13 @@ class App extends Component {
             cursor="rayOrigin: mouse"/>
 
           <a-sound id="sound1" src="textures/Mall.ogg" autoplay="true" loop="true" ></a-sound>
+
+          {/* <a-entity position="187 1518 11." scale="900 500 100" rotation="0 90 0">
+            <a-video src="#video1"/>
+          </a-entity> */}
+          {/* <a-entity position="-26 9.51" scale="9 5 5" rotation="0 0 0">
+            <a-video src="#video1"/>
+          </a-entity> */}
 
 
           <a-gltf-model

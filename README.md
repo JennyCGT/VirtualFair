@@ -18,3 +18,10 @@ The design of this virtual environment was designed in React.js with the framewo
 ## Test
 <img src="/images/Mi video2.gif" alt="Test">
 
+## Contributors
+
+### Jennifer Guayta
+<a href="https://www.linkedin.com/in/jennifer-guayta-4a48b114a/">Linkedin</a>
+
+### Juan Balseca
+<a href="https://www.linkedin.com/in/juan-balseca-pinto-9117b397/">Linkedin</a>
